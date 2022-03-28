@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  grfana:
+    image: grafana/grafana
+    restart: always
+    ports:
+      - "3001:3000"
+
+  influx:
+    image: influxdb:1.7
+    restart: always
+    ports:
+      - "8086:8086"
